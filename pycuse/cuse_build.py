@@ -1,5 +1,3 @@
-import importlib.resources
-
 import cffi
 from path import Path
 
