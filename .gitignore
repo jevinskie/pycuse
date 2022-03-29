@@ -1,6 +1,10 @@
 **/*.pyc
 .idea/
 
+pycuse/_cuse.c
+pycuse/_cuse.o
+pycuse/_cuse.*.so
+
 .python-version
 
 pycuse.egg-info/
