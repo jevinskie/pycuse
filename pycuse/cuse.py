@@ -5,6 +5,10 @@ from ._cuse import ffi, lib
 CUSE_UNRESTRICTED_IOCTL: Final[int] = 1 << 0
 
 
-@ffi.def_extern()
-def my_callback(x, y):
-    return 42
+class CUSEDev:
+    def __init__(self, name: str, fg: bool = True, debug: bool = True):
+        args = [f"pycuse-{name}"]
+        if fg:
+            args.append("-f")
+        if debug:
+            args.append("-d")
